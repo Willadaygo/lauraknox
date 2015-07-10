@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+
+html {
+  background-color: $base-background-color;
+  color: $base-text-color;
+  overflow-y: scroll; 
+  min-height: 100%; 
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%; 
+  -moz-osx-font-smoothing: grayscale; 
+   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+
+  @include break($huge-break) {
+    font-size: 125%;
+  }
+  
+}
+
+body {
+  // font-family: $body-font;
+  font-weight: 400;
+}
+
+.site__inner {
+  padding-top: rem(80);
+
+  @include break($med-break) {
+    padding-top: rem(180);
+  }
+
+}

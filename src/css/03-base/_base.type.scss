@@ -1,0 +1,110 @@
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+
+/**
+ * Headings 1–6.
+ */
+
+h1, .t-alpha, 
+h2, .t-beta,
+h3, .t-gamma, 
+h4, .t-delta {
+  // font-family: $body-font-bold;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+h1,.t-alpha {
+  font-size: rem(23);
+  line-height: rem(30);
+  letter-spacing: -0.01em;
+  @include break($med-break) {
+    font-size: rem(40);
+    line-height: rem(46);
+  }
+}
+
+h2, .t-beta,
+h3, .t-gamma {
+  font-size: rem(17);
+  line-height: rem(25);
+  letter-spacing: -0.01em;
+  @include break($med-break) {
+    font-size: rem(24);
+    line-height: rem(28);
+  }
+}
+
+h3, .t-gamma {
+  // font-family: $body-font;
+}
+
+h4, .t-delta {
+  letter-spacing: 0;
+  font-size: rem(17);
+  line-height: rem(24);
+}
+
+
+
+
+
+/**
+ * Paragraphs.
+ */
+p, .p {
+}
+
+
+
+
+
+/**
+ * Emboldened elements.
+ */
+strong, b, em, dt {
+  // font-family: $body-font-bold;
+  font-weight: normal;
+}
+
+
+
+
+
+/**
+ * Horizontal rules.
+ */
+hr {
+  border: none;
+  border-top: rem(1) solid col("black");
+  margin: $base-spacing-unit--large auto;
+
+  @include break($med-break) {
+    margin: $base-spacing-unit--huge auto;
+  }
+
+}
+
+
+
+
+/**
+ * Selection rules.
+ */
+
+::selection { // on select remove text-shadow!
+  text-shadow: none;
+  background: col("black");
+  color: #fff; 
+}
+
+
+
+
+
+
+
+
+
+

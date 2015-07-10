@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
+a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  // transition: $base-transition;
+  @include attention(all) {
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+.link-subtle a {  //used in old footer
+  border-bottom: rem(1) solid transparent;
+  &:hover {
+    border-bottom: rem(1) solid col("blue");
+  }
+}

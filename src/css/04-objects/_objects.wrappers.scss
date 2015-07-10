@@ -1,0 +1,22 @@
+/*------------------------------------*\
+  #WRAPPERS
+\*------------------------------------*/
+
+.wrapper {
+  margin: 0 auto;
+  padding-right: $base-spacing-unit;
+  padding-left:  $base-spacing-unit;
+
+  @include break($small-break) {
+    max-width: $med-pad-break;
+    padding-right: $base-spacing-unit--large;
+    padding-left:  $base-spacing-unit--large;
+  }
+
+  @include break($large-break) {
+    max-width: $large-break;
+  }
+
+}
+
+

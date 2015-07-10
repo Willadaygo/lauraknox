@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ * 6. Fixes odd inner spacing in IE7.
+ * 7. Subtract the border size from the padding value so that buttons do not
+ *    grow larger as we add borders.
+ */
+.btn,
+%btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin:  0; /* [4] */
+  cursor: pointer; /* [5] */
+  overflow: visible; /* [6] */
+  padding: em(11) em(50) em(10.8); /* [7] */
+  max-width: rem(380);
+  background-color: col("black");
+  border: none; /* [4] */
+  border-radius: 0;
+  font-size: rem(44);
+  line-height: normal;
+  text-decoration: none;
+  color: col("white");
+  transition: .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  &:hover,
+  &:active,
+  &:focus {
+    // background-color: col("blue");
+  }
+}
+
+/**
+ * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+ */
+.btn::-moz-focus-inner,
+%btn::-moz-focus-inner {
+  border:  0;
+  padding: 0;
+}

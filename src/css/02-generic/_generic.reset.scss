@@ -1,0 +1,98 @@
+/*------------------------------------*\
+    #RESET
+\*------------------------------------*/
+
+/**
+ * As well as using normalize.css, it is often advantageous to remove all
+ * margins from certain elements.
+ */
+body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+figure,
+table, th, td, caption,
+hr, button {
+  margin:  0;
+  padding: 0;
+}
+
+// ul, ol {
+//   padding-left: $base-spacing-unit;
+// }
+
+// button {
+//   border: 0;
+//   background-color: transparent;
+//   outline: none;
+// }
+
+// address {
+//   font-style: normal;
+// }
+
+
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+
+
+
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+u,
+ins {
+  text-decoration: none;
+}
+
+
+
+
+
+/**
+ * Apply faux underlines to inserted text via `border-bottom`.
+ */
+ins {
+  border-bottom: 1px solid;
+}
+
+
+/**
+ * Media fix
+ */
+audio,
+canvas,
+iframe,
+img,
+video,
+svg {
+    vertical-align: middle;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  &[src*=".svg"] {
+    width: 100% \9; // 1
+  }
+}
+
+_::-ms-reveal,
+img[src*=".svg"] {
+  width: 100%; // 1
+}
+
+// Remove the border around images in anchors.
+a img {
+  border: none;
+}
