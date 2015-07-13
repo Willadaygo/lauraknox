@@ -10,6 +10,9 @@
 	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
 
+  <script src="//use.typekit.net/ssk3pam.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
 	<link rel="stylesheet" href="/css/styles.css">
 
 	<!--[if lt IE 9]> 
@@ -39,6 +42,15 @@
 
     {% include "../modules/footer.twig" %}
 
+  </div>
+
+  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev"></a>
+    <a class="next"></a>
+    <div class="close link--underline"><a class="">Close</a></div>
+    {# <ol class="indicator"></ol> #}
   </div>
 	
 	<script src='/js/vendors.js'></script>
