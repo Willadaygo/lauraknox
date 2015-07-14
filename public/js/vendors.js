@@ -9358,7 +9358,7 @@ return jQuery;
             // The number of elements to load around the current index:
             preloadRange: 2,
             // The transition speed between slide changes in milliseconds:
-            transitionSpeed: 400,
+            transitionSpeed: 300,
             // The transition speed for automatic slide changes, set to an integer
             // greater 0 to override the default transition speed:
             slideshowTransitionSpeed: undefined,
