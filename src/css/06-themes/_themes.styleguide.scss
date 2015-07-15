@@ -62,7 +62,7 @@
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     transform: translate3d(rem(60),0,0);
-    transition: $base-transition;
+    // transition: $base-transition;
     &:hover {
       transform: translate3d(0,0,0);
     }

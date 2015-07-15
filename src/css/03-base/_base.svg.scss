@@ -5,3 +5,17 @@
 svg {
   display: inline-block;
 }
+
+.s-logo {
+  width: rem(220);
+  height: rem(16);
+  fill: col('black');
+}
+
+.s-logo-small {
+  transition: $base-transition;
+  @include size(rem(60));
+  fill: col('black');
+  position: relative;
+  left: rem(17);
+}

@@ -1,8 +1,20 @@
     {% set svg = "../partials/svg.twig" %}
 
-    <header class="header">
+    <header class="header  wrapper">
 
-      
+        <div class="nav">
+          <h2 class="nav__item"><a href="">Work</a></h2>
+          <h2 class="nav__item"><a href="">Contact</a></h2>
+        </div>
+
+        <a href="/" class="logo">
+          {% include svg with {'class': 's-logo-small', 'symbol': '#logo-small'} %}
+        </a>
+
+        <a href="/" class="logo">
+          {% include svg with {'class': 's-logo', 'symbol': '#logo'} %}
+        </a>
+
 
     </header> <!-- /.header -->
 

@@ -1,6 +1,6 @@
 <!doctype html>
-<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en-gb"> <!--<![endif]-->
+<!--[if IE 8]> <html class="lt-ie9 page--{{ page }}"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-gb" class="page--{{ page }}"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -21,7 +21,7 @@
 	<![endif]-->
 
 </head>
-<body class="page--{{ page }}">
+<body>
 	{% include "symbols.twig" %}
 	{% set svg = "svg.twig" %}
 
@@ -42,15 +42,6 @@
 
     {% include "../modules/footer.twig" %}
 
-  </div>
-
-  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-    <div class="slides"></div>
-    <h3 class="title"></h3>
-    <a class="prev"></a>
-    <a class="next"></a>
-    <div class="close link--underline"><a class="">Close</a></div>
-    {# <ol class="indicator"></ol> #}
   </div>
 	
 	<script src='/js/vendors.js'></script>

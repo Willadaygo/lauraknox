@@ -4,8 +4,10 @@
 
 // Palette
 $palette: (
-  "white":           white,
-  "black":           black
+  "white":           #fff,
+  "black":           #000,
+  "grey--light":     darken(#fff, 30), //#b3b3b3
+  "grey--dark":      lighten(#000, 40) //#666666
 );
 
 //Colour function

@@ -12,6 +12,9 @@ html {
   -moz-osx-font-smoothing: grayscale; 
    -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;  
+  @include break($huge-break) {
+    font-size: 120%;
+  }
 }
 
 body {
@@ -19,8 +22,16 @@ body {
   font-weight: 400;
 }
 
+.page--styleguide {
+  background: black;
+  ::selection { // on select remove text-shadow!
+    background: $base-background-color;
+    color: $base-text-color;
+  }
+}
+
 .site__inner {
-  // padding-top: rem(80);
+  padding-top: rem(270);
 
   // @include break($med-break) {
   //   padding-top: rem(180);

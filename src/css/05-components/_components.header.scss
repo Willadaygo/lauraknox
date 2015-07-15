@@ -2,6 +2,52 @@
   #HEADER
 \*------------------------------------*/
 
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: rem(200);
+  background-color: transparent;
+  transition: $base-transition;
+
+  &.is-smaller {
+    height: rem(60);
+    background-color: col('black');
+    color: col('white');
+
+    .s-logo-small {
+      @include size(rem(29));
+      fill: col('white');
+    }
+
+    .s-logo {
+      fill: col('white');
+    }
+
+  }
+
+}
+
+.logo {
+  display: inline-block;
+  transition: .2s ease;
+
+  @include break($med-break) {
+  }
+}
+
+.nav {
+  
+}
+
+.nav__item {
+  display: inline-block;
+}
+
 // // Define our variables
 // $right-width:   100%;
 // $overlap-ratio: 2;

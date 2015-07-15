@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  #GALLERY
+\*------------------------------------*/
+
+$gallery-gutter: 20px;
+
+.gallery {
+  img {
+    width: 100%;
+  }
+}
+
+.gallery__item,
+.gallery__item-sizer {
+  width: calc(50% - #{$gallery-gutter});
+
+  @include break($med-break) {
+    width:  calc(25% - #{$gallery-gutter});
+  }
+
+  @include break($huge-break) {
+    width:  calc(16.666% - #{$gallery-gutter});
+  }
+
+}
+
+.gallery__item {
+  margin-bottom: $gallery-gutter;
+}
+
+.gallery__featured {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - #{$gallery-gutter});
+
+  @include break($med-break) {
+    width: calc(50% - #{$gallery-gutter});
+  }
+
+  img {
+    margin-bottom: $gallery-gutter;
+  }
+  
+}
