@@ -13,6 +13,7 @@
   height: rem(200);
   background-color: transparent;
   transition: $base-transition;
+  overflow: hidden;
 
   &.is-smaller {
     height: rem(60);
@@ -40,12 +41,21 @@
   }
 }
 
+.logo--small {
+  position: relative;
+  left: rem(-10);
+}
+
 .nav {
   
 }
 
 .nav__item {
   display: inline-block;
+  margin-top: 0;
+  a {
+    padding: rem(20);
+  }
 }
 
 // // Define our variables

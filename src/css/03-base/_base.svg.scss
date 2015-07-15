@@ -4,6 +4,7 @@
 
 svg {
   display: inline-block;
+  vertical-align: top;
 }
 
 .s-logo {
@@ -16,6 +17,4 @@ svg {
   transition: $base-transition;
   @include size(rem(60));
   fill: col('black');
-  position: relative;
-  left: rem(17);
 }
