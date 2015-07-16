@@ -9,12 +9,23 @@ svg {
 
 .s-logo {
   width: rem(220);
-  height: rem(16);
+  height: rem(17);
   fill: col('black');
 }
 
 .s-logo-small {
   transition: $base-transition;
-  @include size(rem(60));
+  @include size(rem(29));
   fill: col('black');
+  @include break($med-break) {
+    @include size(rem(60));
+  }
+}
+
+.s-scroll-top {
+  display: block;
+  margin-left: auto;
+  width: rem(12);
+  height: rem(20);
+  fill: col('white');
 }

@@ -14,25 +14,48 @@ h4, .t-delta {
   text-rendering: optimizeLegibility;
 }
 
-h1,.t-alpha {
-  font-size: rem(22);
-  line-height: rem(35);
+h1, .t-alpha { // SMALL CAPS
+  font-size: rem(16);
+  line-height: rem(24);
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  // @include break($med-break) {
-  //   font-size: rem(40);
-  //   line-height: rem(46);
-  // }
+
+  @include break($med-break) {
+    font-size: rem(22);
+    line-height: rem(34);
+  }
+
+  @include break($large-break) {
+    font-size: rem(30);
+    line-height: rem(44);
+    max-width: rem(770);
+  }
+
 }
 
 h2, .t-beta {
-  font-size: rem(18);
-  line-height: rem(26);
+  font-size: rem(16);
+  line-height: rem(24);
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  @include break($med-break) {
+    font-size: rem(20);
+    line-height: rem(28);
+  }
 }
 
+.t-header {
+  font-size: rem(16);
+  line-height: rem(24);
+  // font-weight: 600;
+  // letter-spacing: 0.02em;
+  // text-transform: uppercase;
+  @include break($med-break) {
+    font-size: rem(20);
+    line-height: rem(28);
+  }
+}
 
 
 
@@ -47,9 +70,29 @@ p, .p {
 }
 
 .t-lede {
-  font-size: rem(30);
-  line-height: rem(38);
-  letter-spacing: 0.02em;
+  font-size: rem(22);
+  line-height: rem(30);
+  letter-spacing: 0.030em;
+
+  @include break($med-break) {
+    font-size: rem(30);
+    line-height: rem(38);
+  }
+
+  @include break($large-break) {
+    font-size: rem(42);
+    line-height: rem(53);
+  }
+
+}
+
+.prose {
+  @include break($med-break) {
+    width: 65%;
+  }
+  @include break($large-break) {
+    width: 55%;
+  }
 }
 
 

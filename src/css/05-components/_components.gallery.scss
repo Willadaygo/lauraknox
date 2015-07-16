@@ -10,6 +10,10 @@ $gallery-gutter: 20px;
   }
 }
 
+.gallery__thumb {
+  cursor: pointer;
+}
+
 .gallery__item,
 .gallery__item-sizer {
   width: calc(50% - #{$gallery-gutter});

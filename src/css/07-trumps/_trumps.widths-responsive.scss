@@ -29,14 +29,16 @@
 
 
 
-// @include break($med-break) {
+@include break($med-break) {
 
 //   .med-one-whole          { width: 100%; }
 
 //   .med-one-half           { width: 50%; }
 
-//   // .med-one-third          { width: 33.3334%; }
-//   // .med-two-thirds         { width: 66.6667%; }
+  // .med-one-third          { width: 33.3334%; }
+  // .med-two-thirds         { width: 66.6667%; }
+  // .med-one-third          { width: 30%; }
+  // .med-two-thirds         { width: 70%; }
 
 //   .med-one-quarter        { width: 25%; }
 //   // .med-three-quarters     { width: 75%; }
@@ -48,7 +50,7 @@
 
 //   // .med-push-one-quarter    { position: relative; left: 25%; }
 
-// }
+}
 
 
 

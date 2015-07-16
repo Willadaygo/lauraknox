@@ -50,7 +50,6 @@
 @import "03-base/base.type";
 @import "03-base/base.links";
 @import "03-base/base.svg";
-@import "03-base/base.flexbox";
 
 
 
@@ -74,10 +73,10 @@
  * #COMPONENTS
  */
 
-@import "05-components/components.burger";
 @import "05-components/components.header";
 @import "05-components/components.footer";
 @import "05-components/components.gallery";
+@import "05-components/components.sidebar";
 
 
 
@@ -87,7 +86,7 @@
  * #THEMES
  */
 
-@import "06-themes/themes.styleguide";
+@import "06-themes/themes.contrast";
 
 
 

@@ -6,10 +6,20 @@ a {
   color: inherit;
   font-size: inherit;
   line-height: inherit;
-  // transition: $base-transition;
-  @include attention(all) {
+  text-decoration: none;
+  @include attention(hover) {
     outline: none;
     text-decoration: none;
+    color: col('grey--dark');
+  }
+}
+
+p a {
+  text-decoration: underline;
+  transition: color $base-transition;
+  &:hover {
+    color: col('grey--dark');
+    text-decoration: underline;
   }
 }
 

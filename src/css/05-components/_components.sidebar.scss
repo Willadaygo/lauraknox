@@ -1,0 +1,20 @@
+/*------------------------------------*\
+  #SIDEBAR
+\*------------------------------------*/
+
+.prose {
+  @include break($med-break) {
+    float: left;
+  }
+}
+@include break($med-break) {
+  .sidebar {
+    width: rem(220);
+    float: right;
+  }
+}
+
+
+
+
+

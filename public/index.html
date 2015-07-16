@@ -1,6 +1,6 @@
 <!doctype html>
-<!--[if IE 8]> <html class="lt-ie9 page--home"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en-gb" class="page--home"> <!--<![endif]-->
+<!--[if IE 8]> <html class="lt-ie9 page--home theme--light"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-gb" class="page--home  theme--light"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -25,7 +25,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
 
 <symbol id="arrow-up" viewBox="0 0 9 16">
-        <path fill="#1E1E1E" d="M9 4.5L4.5 0 0 4.5l1.15 1.15 2.538-2.54V16h1.626V3.112L7.85 5.65"/>
+        <path d="M9 4.5L4.5 0 0 4.5l1.15 1.15 2.538-2.54V16h1.626V3.112L7.85 5.65"/>
 </symbol>
 
 <symbol id="icon-facebook" viewBox="0 0 50 50">
@@ -48,23 +48,34 @@
         <path d="M32.857 0h-3.685v30.898H60v-3.695H32.857M.137 29.047L31.017 60l2.606-2.613-30.88-30.953"/>
 </symbol>
 </svg>	
-  <div class="site">
+  <main class="site">
 
         
-    <header class="header  wrapper">
+    <header class="header">
 
-      <h2 class="nav__item e1"><a href="">Work</a></h2>
-      <h2 class="nav__item e2"><a href="">Contact</a></h2>
+      <h2 class="t-header  nav__item  nav__item--1  is-active">
+        <a href="/">Work</a>
+      </h2>
 
-      <a href="/" class="logo logo--small e3">
+      <h2 class="t-header  nav__item  nav__item--2  ">
+        <a href="/contact/">Contact</a>
+      </h2>
+
+      <a href="/" class="logo  logo--small">
         <svg class="s-logo-small" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <use xlink:href="#logo-small"></use>
 </svg>      </a>
-
-      <a href="/" class="logo e4">
-        <svg class="s-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      
+      <div class="has-arrow  h-med-down">
+        <a href="/" class="logo  logo--large  l-padding">
+          <svg class="s-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <use xlink:href="#logo"></use>
-</svg>      </a>
+</svg>        </a>
+        <button class="scroll-top  js-scroll-top  l-padding">
+          <svg class="s-scroll-top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <use xlink:href="#arrow-up"></use>
+</svg>        </button>
+      </div>
 
     </header> <!-- /.header -->
 
@@ -83,89 +94,99 @@
     <!-- used to calculate size of images with masonry -->
 
     <div class="gallery__featured">
-      <figure class="gallery__thumb" data-src="/img/l__big.jpg" data-sub-html="<h1>First Caption 1</h1>">
-        <img src="/img/l__big.jpg" alt="">
+      <figure class="gallery__thumb" data-src="/img/3.jpg" data-sub-html="<figcaption>Scotchy Scrotch</figcaption>">
+        <img src="/img/3.jpg" alt="">
       </figure>
 
-      <figure class="gallery__thumb" data-src="/img/l__big.jpg" data-sub-html="<h1>Caption 2</h1>">
-        <img src="https://placehold.it/800x600?text=Featured" alt="">
+      <figure class="gallery__thumb" data-src="/img/8.jpg" data-sub-html="<figcaption>Grey Goose Raspberry Piss</figcaption>">
+        <img src="/img/8.jpg" alt="">
       </figure>
     </div>
 
-    <figure class="gallery__item  gallery__thumb" data-src="/img/l__big.jpg" data-sub-html="<h1>Ooo another caption</h1>">
-      <img src="/img/l__small.jpg" alt="blah blah">
+    <figure class="gallery__item  gallery__thumb" data-src="/img/1.jpg" data-sub-html="<figcaption>Egg on B &amp; W</figcaption>">
+      <img src="/img/1.jpg" alt="blah blah">
     </figure>
 
-    <figure class="gallery__item  gallery__thumb" data-src="/img/p__big.jpg" data-sub-html="<h1>FML</h1>">
-      <img src="/img/p__small.jpg" alt="blah blah">
+    <figure class="gallery__item  gallery__thumb" data-src="/img/2.jpg" data-sub-html="<figcaption>I prefer drinking straight from the carafe</figcaption>">
+      <img src="/img/2.jpg" alt="blah blah">
     </figure>
 
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x565?text=3" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x65?text=4" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x265?text=5" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x365?text=6" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x565?text=7" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x165?text=8" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x265?text=9" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x365?text=10" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x500?text=11" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x865?text=12" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x265?text=13" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x365?text=14" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x665?text=15" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x65?text=16" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x265?text=17" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x365?text=18" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x565?text=19" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x165?text=20" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x265?text=21" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x365?text=22" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x565?text=23" alt="">
-    </div>
-    <div class="gallery__item">
-      <img src="https://placehold.it/472x865?text=24" alt="">
-    </div>
+    <figure class="gallery__item  gallery__thumb" data-src="/img/4.jpg" data-sub-html="<figcaption>DRANK</figcaption>">
+      <img src="/img/4.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/5.jpg" data-sub-html="<figcaption>Where's the bunsen burner?!</figcaption>">
+      <img src="/img/5.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/6.jpg" data-sub-html="<figcaption>A Good Ol’ Fashioned Bastard</figcaption>">
+      <img src="/img/6.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/7.jpg" data-sub-html="<figcaption>Bombay Bicycle Club</figcaption>">
+      <img src="/img/7.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/9.jpg" data-sub-html="<figcaption>Jam</figcaption>">
+      <img src="/img/9.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/10.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/10.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/11.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/11.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/12.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/12.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/13.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/13.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/14.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/14.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/15.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/15.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/16.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/16.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/17.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/17.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/18.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/18.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/19.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/19.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/20.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/20.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/21.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/21.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/22.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/22.jpg" alt="blah blah">
+    </figure>
+
+    <figure class="gallery__item  gallery__thumb" data-src="/img/23.jpg" data-sub-html="<figcaption>blah blah</figcaption>">
+      <img src="/img/23.jpg" alt="blah blah">
+    </figure>
+
   </div>
 
 </section> <!-- /.wrapper -->
@@ -181,7 +202,7 @@
     </footer> <!-- /.footer -->
 
  
-  </div>
+  </main>
 	
 	<script src='/js/vendors.js'></script>
 	<script src="/js/scripts.js"></script>

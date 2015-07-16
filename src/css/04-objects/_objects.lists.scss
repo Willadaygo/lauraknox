@@ -3,8 +3,17 @@
 \*------------------------------------*/
 
 .list {
-  margin: 0;
   padding: 0;
   list-style:none;
+
+  & + & {
+    margin-top: $base-spacing-unit--huge;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: $base-spacing-unit;
+  }
+
 }
 

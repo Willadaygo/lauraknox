@@ -4,7 +4,7 @@
 
 .l-padding {
   padding: $base-spacing-unit;
-  @include break($med-break) {
+  @include break($large-break) {
     padding: $base-spacing-unit--large;
   }
 }

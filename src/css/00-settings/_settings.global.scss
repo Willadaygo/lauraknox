@@ -22,7 +22,8 @@ $base-line-height:        rem(24) !default;
 $base-spacing-unit:           rem(20);
 $base-spacing-unit--tiny:     $base-spacing-unit / 4;
 $base-spacing-unit--small:    $base-spacing-unit / 2;
-$base-spacing-unit--large:    $base-spacing-unit * 2;
+// $base-spacing-unit--large:    $base-spacing-unit * 2;
 $base-spacing-unit--huge:     $base-spacing-unit * 3;
+$base-spacing-unit--large:     rem(80);
 
 

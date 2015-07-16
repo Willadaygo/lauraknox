@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    #Themes
+\*------------------------------------*/
+
+.theme--dark {
+  background: col('black');
+  color: col('white');
+
+  svg {
+    fill: col('white');
+  }
+
+  ::selection { // on select remove text-shadow!
+    background: $base-background-color;
+    color: $base-text-color;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -13,9 +13,10 @@
   //   padding-left:  $base-spacing-unit--large;
   // }
 
-  // @include break($large-break) {
-  //   max-width: $large-break;
-  // }
+  @include break($large-break) {
+    padding-right: $base-spacing-unit--large;
+    padding-left:  $base-spacing-unit--large;
+  }
 
 }
 

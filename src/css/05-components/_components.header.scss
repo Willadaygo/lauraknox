@@ -5,28 +5,80 @@
 .header {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: rem(200);
-  background-color: transparent;
+  height: rem(90);
+  background-color: col('white');
   transition: $base-transition;
   overflow: hidden;
+
+  .theme--dark & {
+    background-color: col('black');
+  }
+
+  @include break($med-break) {
+    background-color: transparent;
+    height: rem(200);
+    justify-content: flex-start;
+  }
 
   &.is-smaller {
     height: rem(60);
     background-color: col('black');
     color: col('white');
 
-    .s-logo-small {
-      @include size(rem(29));
+    svg {
       fill: col('white');
     }
 
-    .s-logo {
-      fill: col('white');
+    .s-logo-small {
+      @include size(rem(29));
+    }
+
+    .nav__item.is-active {
+      color: col('grey--dark');
+    }
+
+    .theme--dark & {
+      background-color: col('white');
+      color: col('black');
+
+      svg {
+        fill: col('black');
+      }
+
+      .nav__item.is-active {
+        color: col('grey--light');
+      }
+
+    }
+
+    .logo--large {
+      opacity: 0;
+      transform: translate3d(0,rem(-10),0);
+      transition: $base-transition .2s;
+
+      .light-gallery & {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+    }
+
+    .scroll-top {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+      transition: $base-transition .2s;
+
+      .light-gallery & {
+        transform: translate3d(0,rem(20),0);
+        opacity: 0;
+      }
+
     }
 
   }
@@ -36,301 +88,71 @@
 .logo {
   display: inline-block;
   transition: .2s ease;
-
-  @include break($med-break) {
-  }
 }
 
 .logo--small {
-  position: relative;
-  left: rem(-10);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.nav {
-  
+.logo--large {
+  transition: $base-transition 0;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+}
+
+.has-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.scroll-top {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: $base-transition 0;
+  transform: translate3d(0,rem(20),0);
+  backface-visibility: hidden;
 }
 
 .nav__item {
+  float: left;
   display: inline-block;
   margin-top: 0;
   a {
-    padding: rem(20);
+    padding: $base-spacing-unit;
+
+    @include break($large-break) {
+      padding: $base-spacing-unit--large;
+    }
+  }
+
+  &.is-active {
+    color: col('grey--light');
+
+    .theme--dark & {
+      color: col('grey--dark');
+    }
+
+  }
+
+}
+
+.nav__item--1 {
+  a {
+    padding-right: $base-spacing-unit;
   }
 }
 
-// // Define our variables
-// $right-width:   100%;
-// $overlap-ratio: 2;
-// $header-height: rem(80); // IE and Firefox 1 pixel fix
-
-// .header {
-//   position: fixed;
-//   top: 0;
-//   z-index: 10;
-//   width: 100%;
-//   height: $header-height;
-//   background: col("white");
-//   transition: $base-transition;
-
-//   @include break($med-break) {
-//     height: ($header-height*2); // IE and Firefox 1 pixel fix
-    
-//     // Shrunk header changes
-//     &.is-smaller {
-//       height: $header-height;
-//       .ocn--main {
-//         margin-top: rem(15);
-//       }
-//       .logo {
-//         padding: rem(18) $base-spacing-unit--large rem(7);
-//       }
-//       .s-logo {
-//         width: rem(80);
-//         height: rem(47);
-//       }
-//     }
-//   }
-// }
-
-// .header__inner {
-//   border-bottom: rem(2) solid col("black");
-// }
-
-// .logo {
-//   display: inline-block;
-//   padding: rem(18) $base-spacing-unit rem(9);
-//   transition: $base-transition;
-
-//   @include break($med-break) {
-//     padding: rem(39) $base-spacing-unit--large rem(8);
-//   }
-
-// }
-
-
-
-
-
-// /*  #Hambuger Button
-// --------------------------------------*/
-
-// .ocn-menu-button {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   padding: rem(45) rem(20) rem(14) rem(20);
-
-//   @include break($med-break) {
-//     display: none;
-//   }
-
-// }
-
-// .burger-icon {
-//   @include burger(rem(20), rem(3), rem(5), col("black"));
-// }
-
-// .ocn-menu-button.is-active .burger-icon {
-//   @include burger-to-cross;
-// }
-
-
-
-
-
-// /*  #Off Canvas Navigation
-// --------------------------------------*/
-// .ocn {
-//   display:none; // stops rendering flicker on mob
-//   position: fixed;
-//   // top: $header-height;
-//   top: 0;
-//   right: 0;
-//   // padding-bottom: $header-height; // necessary to counter top push
-//   // z-index: 10;
-//   padding-top: $header-height;
-//   padding-bottom: $header-height;
-//   background: col('white');
-//   width: $right-width;
-//   height: 100%;
-//   transform: translate3d(100%,0,0);
-//   will-change: transform;
-//   overflow: scroll;
-//   z-index: -1;
-//   border-bottom: rem(2) solid col("black");
-
-//   &.is-visible {
-//     display: block;
-//   }
-
-//   @include break($med-break) {
-//     padding-top: 0;
-//     padding-bottom: 0;
-//     border-bottom: 0;
-//     z-index: 0;
-//     overflow: hidden;
-//   }
-
-//   .grid, .column {
-//     margin-top: 0;
-//   }
-
-// }
-
-// .ocn--main {
-//   h2 {
-//     margin-top: 0;
-//     font-family: $body-font-bold;
-//     font-weight: normal;
-//     font-size: rem(24);
-//     line-height: rem(28);
-//     letter-spacing: -0.01em;
-
-//     @include break($med-break) {
-//       padding: 0;
-//       display: inline-block;
-//       font-size: rem(17);
-//       line-height: rem(25);
-//     }
-
-//   }
-
-//   @include break($med-break) {
-//     position: static;
-//     background: none;
-//     width: auto;
-//     height: auto;
-//     transform: none;
-//     float: right;
-//     clear: both;
-//     margin-top: rem(93);
-//   }
-
-// }
-
-// .ocn--sub {
-//   overflow: auto;
-
-//   h2 {
-//     font-size: rem(24);
-//     line-height: rem(28);
-//   }
-
-//   &.is-open {
-//     transform: translate3d(0,0,0);
-//   }
-
-//   @include break($med-break) {
-//     position: relative;
-//     top: 0;
-//     transform: translate3d(0,-100%,0);
-//     width: 100%;
-//     height: auto;
-//     z-index: -1;
-//   }
-
-// }
-
-
-
-// .ocn__list { //ul
-//   list-style:none;
-//   margin:0;
-//   padding: 0 $base-spacing-unit;
-
-//   @include break($med-break) {
-//     padding-right: 0;
-//   }
-
-// }
-
-// .ocn__list > li { //li
-
-//   @include break($med-break) {
-//     padding: 0;
-//     display: inline-block;
-//     margin: 0 rem(18);
-
-//     &:last-child {
-//       margin-right: 0;
-//     }
-
-//     &.is-active a {
-//       border-bottom: rem(8) solid col("black");
-//     }
-
-//     &:hover a,
-//     &.is-active:hover a {
-//       border-bottom: rem(8) solid $color-links-hover;
-//     }
-    
-//   }
-
-// }
-
-// @include break-max($med-break) {
-
-//   .ocn__link {
-//     margin-top: 0;
-//   }
-
-//   .ocn__link a {
-//     display: block;
-//     width: 100%;
-//     padding: rem(22) 0 rem(18) 0;
-//     transition: $base-transition;
-//     border-bottom: rem(2) solid col("grey--light");
-//   }
-
-// }
-
-// .ocn__link--nav a {
-
-//   @include break($med-break) {
-//     display: inline-block;
-//     padding: rem(20) rem(2) rem(12) rem(2);
-//     border-bottom: rem(8) solid transparent;
-
-//   }
-
-// }
-
-// .site__inner,
-// .ocn {
-//   transition: $base-transition-speed*2 $base-transition-ease;
-// }
-
-// .ocn--main {
-//   @include break($med-break) {
-//     transition: $base-transition;
-//   }
-// }
-
-  
-// @include break-max($med-break) {
-
-//   .site__inner {
-//     transform: translate3d(0,0,0);
-//   }
-
-//   .ocn-show-right {
-
-//     .site__inner {
-//       transform: translate3d(-#{$right-width / $overlap-ratio},0,0);
-//     }
-
-//     .ocn--main {
-//       transform: translate3d(0,0,0);
-//     }
-
-//   }
-
-//   .ocn-show-right--sub {
-
-//     .ocn--main {
-//       transform: translate3d(-#{$right-width / $overlap-ratio},0,0);
-//     }
-
-//   }
-
-// }
+.nav__item--2 {
+  order: 1;
+  a {
+    padding-left: 0;
+  }
+}
