@@ -7,12 +7,6 @@
   padding-right: $base-spacing-unit;
   padding-left:  $base-spacing-unit;
 
-  // @include break($small-break) {
-  //   max-width: $med-pad-break;
-  //   padding-right: $base-spacing-unit--large;
-  //   padding-left:  $base-spacing-unit--large;
-  // }
-
   @include break($large-break) {
     padding-right: $base-spacing-unit--large;
     padding-left:  $base-spacing-unit--large;
@@ -23,6 +17,12 @@
 .wrapper--grid {
   padding-right: 0;
   padding-left:  $base-spacing-unit;
+
+  @include break($large-break) {
+    padding-right: rem(60);
+    padding-left:  $base-spacing-unit--large;
+  }
+  
 }
 
 

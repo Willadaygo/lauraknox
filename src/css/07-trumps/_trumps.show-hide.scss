@@ -2,46 +2,8 @@
     #SHOW-HIDE
 \*------------------------------------*/
 
-// @mixin hide() {
-//     position: absolute !important;
-//     height: 1px; width: 1px; 
-//     overflow: hidden;
-//     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-//     clip: rect(1px, 1px, 1px, 1px);
-// }
-
-.h-small-up {
-  @include break($small-break) {
-    display: none!important;
-  }
-}
-
-.h-med-up {
-  @include break($med-break) {
-    display: none!important;
-  }
-}
-
-.h-large-up {
-  @include break($large-break) {
-    display: none;
-  }
-}
-
-.h-small-down {
-  @include break-max($small-break) { 
-    display: none!important;
-  }
-}
-
 .h-med-down {
   @include break-max($med-break) { 
     display: none!important;
-  }
-}
-
-.h-large-down {
-  @include break-max($large-break) { 
-    display: none;
   }
 }

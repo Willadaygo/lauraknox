@@ -6,29 +6,6 @@
 // .t-#{...} are for TEXT specific helpers
 // .h-#{...} are for HIDDEN specific helpers
 
-
-@each $profile, $color in $palette {
-  .l-#{$profile} { background-color: $color !important; }
-  .l-#{$profile}--hover:hover { background-color: $color !important; }
-  .t-#{$profile} { color: $color !important; }
-  .t-#{$profile}--hover:hover { color: $color !important; }
-  .f-#{$profile} svg { fill: $color !important; }
-  .f-#{$profile}--hover:hover svg { fill: $color !important; }
-}
-
-.t-align-center {
-  text-align: center;
-}
-
-.t-align-right {
-  text-align: right;
-}
-
-.l-center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .l-clear {
   clear: both;
 }
@@ -48,26 +25,6 @@
   float: right;
 }
 
-.z-level-1 {
-  z-index: 10;
-}
-
-.z-level-2 {
-  z-index: 20;
-}
-
-.l-dis-block {
-  display: block;
-}
-
-.l-dis-inline {
-  display: inline;
-}
-
-.l-relative {
-  position: relative;
-}
-
 .l-abs-center {
   position: absolute;
   top: 50%;
@@ -80,20 +37,4 @@
   white-space: nowrap;
   overflow: hidden;
 }
-
-/**
- * Font helpers.
- */
-
-// .serif {
-//   font-family: $headings-font !important;
-// }
-
-// .sans-serif {
-//   font-family: $body-font !important;
-// }
-
-// .sans-serif--bold {
-//   font-family: $body-font-bold !important;
-// }
 

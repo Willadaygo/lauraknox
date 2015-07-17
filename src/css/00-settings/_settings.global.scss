@@ -3,10 +3,6 @@
 \*------------------------------------*/
 
 $base-transition: 200ms ease;
-// $base-transition-speed: 165ms;
-// // $base-transition-speed: 1s; //speed test
-// $base-transition-ease: cubic-bezier(0.86, 0, 0.07, 1);
-
 
 // High-level base settings.
 $base-font-size:          rem(16) !default;
@@ -20,10 +16,7 @@ $base-line-height:        rem(24) !default;
 // above. Feel free to use these variables throughout your project, but do not
 // modify or reassign them.
 $base-spacing-unit:           rem(20);
-$base-spacing-unit--tiny:     $base-spacing-unit / 4;
-$base-spacing-unit--small:    $base-spacing-unit / 2;
-// $base-spacing-unit--large:    $base-spacing-unit * 2;
+$base-spacing-unit--large:    $base-spacing-unit * 4;
 $base-spacing-unit--huge:     $base-spacing-unit * 3;
-$base-spacing-unit--large:     rem(80);
 
 

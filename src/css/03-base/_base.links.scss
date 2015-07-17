@@ -14,18 +14,44 @@ a {
   }
 }
 
-p a {
-  text-decoration: underline;
+$underline-position--p :    em(18);
+$underline-thickness: rem(1);
+$color-links-underline: col('white');
+
+p a,
+.p a {
+  // text-decoration: underline;
   transition: color $base-transition;
+  // color: $color-links;
+  background-color: transparent;
+  background-image:
+    linear-gradient($color-links-underline, $color-links-underline), //tiny additional underline left
+    linear-gradient($color-links-underline, $color-links-underline), //tiny additional underline right
+    linear-gradient($color-links-underline, $color-links-underline); //main underline
+  /**
+  * Use ems instead of pixel if you want 
+  * the underline height to be responsive 
+  * to font-size.
+  **/
+  background-size:
+    em(.8) $underline-thickness, //tiny additional underline left
+    em(.8) $underline-thickness, //tiny additional underline right
+    $underline-thickness $underline-thickness; //main underline
+  background-repeat: 
+    no-repeat, //tiny additional underline left
+    no-repeat, //tiny additional underline right
+    repeat-x;  //main underline
+  background-position: 
+    0%    $underline-position--p,   //tiny additional underline left
+    100%  $underline-position--p, //tiny additional underline right
+    0%    $underline-position--p;   //main underline
+
   &:hover {
     color: col('grey--dark');
-    text-decoration: underline;
+    // text-decoration: underline;
   }
 }
 
-.link-subtle a {  //used in old footer
-  border-bottom: rem(1) solid transparent;
-  &:hover {
-    border-bottom: rem(1) solid col("blue");
-  }
+.links-subtle a {
+  background-image: none;
 }

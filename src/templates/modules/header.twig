@@ -3,19 +3,19 @@
     <header class="header">
 
       <h2 class="t-header  nav__item  nav__item--1  {% if page == 'home' %}is-active{% endif %}">
-        <a href="/">Work</a>
+        <a data-switch href="/">Work</a>
       </h2>
 
       <h2 class="t-header  nav__item  nav__item--2  {% if page == 'contact' %}is-active{% endif %}">
-        <a href="/contact/">Contact</a>
+        <a data-switch href="/contact/">Contact</a>
       </h2>
 
-      <a href="/" class="logo  logo--small">
+      <a data-switch href="/" class="logo  logo--small">
         {% include svg with {'class': 's-logo-small', 'symbol': '#logo-small'} %}
       </a>
       
       <div class="has-arrow  h-med-down">
-        <a href="/" class="logo  logo--large  l-padding">
+        <a data-switch href="/" class="logo  logo--large  l-padding">
           {% include svg with {'class': 's-logo', 'symbol': '#logo'} %}
         </a>
         <button class="scroll-top  js-scroll-top  l-padding">

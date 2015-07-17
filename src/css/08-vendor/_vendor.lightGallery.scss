@@ -104,11 +104,26 @@
 }
 /**/
 #lg-slider .lg-slide {
-  // background: url(../img/loading.gif) no-repeat scroll center center transparent;
+  background: url(/img/logo-small--white.svg) no-repeat scroll center center transparent;
   display: inline-block;
   height: 100%;
   text-align: center;
   width: 100%;
+  // -webkit-animation-name: 'pulse_animation';
+  // -webkit-animation-duration: 5000ms;
+  // -webkit-transform-origin:70% 70%;
+  // -webkit-animation-iteration-count: infinite;
+  // -webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes pulse_animation {
+  0% { -webkit-transform: scale(1); }
+  30% { -webkit-transform: scale(1); }
+  40% { -webkit-transform: scale(1.08); }
+  50% { -webkit-transform: scale(1); }
+  60% { -webkit-transform: scale(1); }
+  70% { -webkit-transform: scale(1.05); }
+  80% { -webkit-transform: scale(1); }
+  100% { -webkit-transform: scale(1); }
 }
 #lg-slider .lg-slide.complete {
   background-image: none;

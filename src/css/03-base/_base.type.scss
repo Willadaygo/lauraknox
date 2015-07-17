@@ -87,6 +87,9 @@ p, .p {
 }
 
 .prose {
+  .t-lede:first-child {
+    margin-top: 0;
+  }
   @include break($med-break) {
     width: 65%;
   }
@@ -109,24 +112,6 @@ strong, b, em, dt {
 
 
 
-
-/**
- * Horizontal rules.
- */
-hr {
-  border: none;
-  border-top: rem(1) solid col("black");
-  margin: $base-spacing-unit--large auto;
-
-  @include break($med-break) {
-    margin: $base-spacing-unit--huge auto;
-  }
-
-}
-
-
-
-
 /**
  * Selection rules.
  */
@@ -135,9 +120,6 @@ hr {
   background: $base-text-color;
   color: $base-background-color;
 }
-
-
-
 
 
 

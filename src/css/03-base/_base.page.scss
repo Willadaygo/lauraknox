@@ -11,7 +11,7 @@ html {
       -ms-text-size-adjust: 100%; 
   -moz-osx-font-smoothing: grayscale; 
    -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeSpeed;  
+  text-rendering: optimizeSpeed;
   // @include break($huge-break) {
   //   font-size: 120%;
   // }
@@ -24,6 +24,7 @@ body {
 
 .site__inner {
   padding-top: rem(100);
+  padding-bottom: rem(100);
 
   @include break($med-break) {
     padding-top: rem(270);

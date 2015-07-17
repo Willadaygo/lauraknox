@@ -17,6 +17,7 @@ svg {
   transition: $base-transition;
   @include size(rem(29));
   fill: col('black');
+  transform: scale(1);
   @include break($med-break) {
     @include size(rem(60));
   }

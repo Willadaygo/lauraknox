@@ -7,11 +7,15 @@
     float: left;
   }
 }
-@include break($med-break) {
-  .sidebar {
+.sidebar {
+   margin-top: rem(60);
+
+  @include break($med-break) {
+    margin-top: 0;
     width: rem(220);
     float: right;
   }
+
 }
 
 

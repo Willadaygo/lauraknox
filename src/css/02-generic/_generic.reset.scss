@@ -18,19 +18,15 @@ hr, button {
   padding: 0;
 }
 
-// ul, ol {
-//   padding-left: $base-spacing-unit;
-// }
-
 button {
   border: 0;
   background-color: transparent;
   outline: none;
 }
 
-// address {
-//   font-style: normal;
-// }
+address {
+  font-style: normal;
+}
 
 
 
@@ -65,34 +61,42 @@ ins {
   border-bottom: 1px solid;
 }
 
+//MEDIA RESETS
 
-/**
- * Media fix
- */
 audio,
 canvas,
-iframe,
 img,
-video,
-svg {
-    vertical-align: middle;
+video {
+  vertical-align: middle;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-
-  &[src*=".svg"] {
-    width: 100% \9; // 1
-  }
-}
-
-_::-ms-reveal,
-img[src*=".svg"] {
-  width: 100%; // 1
-}
-
-// Remove the border around images in anchors.
 a img {
   border: none;
+}
+
+.media {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  height: 0;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
+.media iframe,
+.media object,
+.media embed,
+.media video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  background-color: transparent;
 }

@@ -61,9 +61,7 @@
 
 @import "04-objects/objects.page-loader";
 @import "04-objects/objects.wrappers";
-@import "04-objects/objects.buttons";
 @import "04-objects/objects.lists";
-@import "04-objects/objects.media";
 
 
 
@@ -96,7 +94,6 @@
  * #TRUMPS
  */
 
-@import "07-trumps/trumps.widths-responsive";
 @import "07-trumps/trumps.show-hide";
 @import "07-trumps/trumps.helpers";
 @import "07-trumps/trumps.spacing";
@@ -109,5 +106,5 @@
  * #VENDOR
  */
 
-@import "08-vendor/vendor.gallery";
+@import "08-vendor/vendor.lightGallery";
 

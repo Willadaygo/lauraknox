@@ -2,14 +2,12 @@
     #PAGE LOADER
 \*------------------------------------*/
 
-// .switch {
-//   // transition: $base-transition-speed $base-transition-ease;
-//   // transition-property: opacity, transform;
-//   opacity: 1;
-//   transform: translate3d(0, 0, 0);
-//   &.is-hidden {
-//     opacity: 0;
-//     transform: translate3d(0, rem(40), 0);
-//   }
-// }
+.switch {
+  // transition: $base-transition;
+  transition: opacity 1s ease;
+  opacity: 1;
+  &.is-hidden {
+    opacity: 0;
+  }
+}
 

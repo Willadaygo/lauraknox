@@ -2,9 +2,15 @@
     #Themes
 \*------------------------------------*/
 
+.theme--light, 
 .theme--dark {
-  background: col('black');
+  transition: background-color .2s ease;
+}
+
+.theme--dark {
+  background-color: col('black');
   color: col('white');
+  // transition: background-color .2s ease;
 
   svg {
     fill: col('white');
